@@ -1,3 +1,4 @@
+import time
 import subprocess
 #rad路径(建议使用相对路径)
 radPath="./Rad/rad.exe"
@@ -10,7 +11,8 @@ def Scan(target,startxray):
 	rsp=subprocess.Popen(cmd,start_new_session=True)
 	rsp.communicate()
 with open("target.txt","r") as targats:
-	xrayShell = [xrayPath, "webscan", "--listen", xrayProxy, "--html-output", "result.html"]
+	result=time.strftime("%Y-%m-%d/%H:%M:%S",time.localtime())
+	xrayShell = [xrayPath, "webscan", "--listen", xrayProxy, "--html-output", result]
 	startxray = subprocess.Popen(xrayShell)
 	while targat :=targats.readline().strip("\n"):
 		Scan(targat,startxray)
