@@ -1,8 +1,9 @@
 # Xray_Rad_Fusion
 ~~只需配置xray和rad的路径~~
+
 需将xray和rad与Scan.py放置同一目录下并更改Scan文件中关于xray和rad的名字
 
-~~并添加目标到**target.txt**中使用python3.8运行即可开始享受吧！~~
+并添加目标到**target.txt**中使用python3.8运行即可开始享受吧
 
 ###logs：
 
